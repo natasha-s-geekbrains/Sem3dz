@@ -12,19 +12,19 @@ int Prompt(string message)
 
 void GetCubes(int number)
 {
-    int X = 1;
+    int value = 1;
 
-    while (X <= number)
+    while (value <= number)
     {
-        if (X == number)
+        if (value == number)
         {
-            Console.Write($"{Math.Pow(X, 3)}");
+            Console.Write($"{Math.Pow(value, 3)}");
         }
         else
         {
-            Console.Write($"{Math.Pow(X, 3) + ", "}");
+            Console.Write($"{Math.Pow(value, 3) + ", "}");
         }
-        X++;
+        value++;
     }
 }
 
