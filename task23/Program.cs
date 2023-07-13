@@ -10,18 +10,23 @@ int Prompt(string message)
     return num;
 }
 
-int N = Prompt("Введите число: ");
-int sum = 1;
-
-while (sum <= N)
+void GetCubes(int number)
 {
-    if (sum == N)
+    int X = 1;
+
+    while (X <= number)
     {
-        Console.Write($"{Math.Pow(sum, 3)}");
+        if (X == number)
+        {
+            Console.Write($"{Math.Pow(X, 3)}");
+        }
+        else
+        {
+            Console.Write($"{Math.Pow(X, 3) + ", "}");
+        }
+        X++;
     }
-    else
-    {
-        Console.Write($"{Math.Pow(sum, 3) + ", "}");
-    }
-    sum++;
 }
+
+int N = Prompt("Введите число: ");
+GetCubes(N);
